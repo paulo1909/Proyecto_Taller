@@ -1,19 +1,19 @@
-import random  #se importa el módulo random para poder obtener valores aleatorios
+import random
 
-Rostros=["Redondo", "Alargado", "Corazón", "Cuadrado", "Ovalado", "Rectangular"] #se define la variable "Rostros" con una lista que contiene las diferentes formas que van a tener los rostros.
-Piel=["Negra", "Marrón", "Morena", "Clara", "Blanca"] #se define la variable "Piel" con una lista que almacena los distintos tonos de piel que van a tener las personas.
-Emociones=["Felicidad", "Tristeza", "Seriedad", "Indiferencia", "Enojo", "Temor", "Estrez"] #se define la variable "Emociones" con una lista que almacena las distintas emociones que tendrán las personas.
-Generos=["Masculino", "Femenino"] #se define la variable "Géneros" con una lista que almacena el género que tendrá cada persona.
-Accesorios=["lentes", "Aretes", "Percing", "Tatuajes", "Collar", "Ninguno", "Ninguno", "Ninguno", "Ninguno", "Ninguno"] #se define la variable "Accesorios" con una lista que almacena el tipo de accesorio que llevaría cada persona.
-ColorDelPelo=["negro", "rubio", "café", "castaño", "gris", "invisible"] #se define la variable "ColorDelPelo" con una lista que almacena los diferentes colores de cabello que podría tener cada persona.
-Densidad=["Escaso", "Moderado", "Abundante"] #se define la variable "Densidad" con una lista que almacena las densidades de cabello que podrían tener las personas.
-Textura=["lacio", "Ondulado", "Rizado"] #se define la variable "Textura" con una lista que almacena las diferentas texturas dec abello que puede tener cada persona.  
-Forma=["almendrados", "separados", "redondos", "caídos", "saltones", "juntos", "profundos", "asiático"] #se define la variable "Forma" con una lista que almacena el tipo de ojos que tendrían las personas.
-Color=["negro", "castaño", "ámbar", "avellana", "verde", "azul", "gris"] #se define la variable "Color" con una lista que almacena los posibles colores que tendrán los ojo de las personas.
-Provincia=["San José", "Alajuela", "Cartago", "Heredia", "Puntarenas", "Guanacaste", "Limón"] #se define la variable "Provincia" con una lista que almacena las diferentes provincias donde vivirían las personas.
-def Inicio(): #se crea la función con que da inicio el programa
+Rostros=["Redondo", "Alargado", "Corazón", "Cuadrado", "Ovalado", "Rectangular"]
+Piel=["Negra", "Marrón", "Morena", "Clara", "Blanca"]
+Emociones=["Felicidad", "Tristeza", "Seriedad", "Indiferencia", "Enojo", "Temor", "Estrez"]
+Generos=["Masculino", "Femenino"]
+Accesorios=["lentes", "Aretes", "Percing", "Tatuajes", "Collar", "Ninguno", "Ninguno", "Ninguno", "Ninguno", "Ninguno"]
+ColorDelPelo=["negro", "rubio", "café", "castaño", "gris", "invisible"]
+Densidad=["Escaso", "Moderado", "Abundante"]
+Textura=["lacio", "Ondulado", "Rizado"]
+Forma=["almendrados", "separados", "redondos", "caídos", "saltones", "juntos", "profundos", "asiático"]
+Color=["negro", "castaño", "ámbar", "avellana", "verde", "azul", "gris"]
+Provincia=["San José", "Alajuela", "Cartago", "Heredia", "Puntarenas", "Guanacaste", "Limón"]
+def Inicio():
 
-  Login=int(input("Digite el numero correspondiente si desea iniciar sesion como: 1.Administrador 2.Analista 3.Usuario:  ")) #Se crea el login con input en el que selecciona como se desea iniciar sesión.
+  Login=int(input("Digite el numero correspondiente si desea iniciar sesion como: 1.Administrador 2.Analista 3.Usuario:  "))
   if Login == 1 :
       Login="Administrador"
   elif Login == 2:
@@ -22,9 +22,9 @@ def Inicio(): #se crea la función con que da inicio el programa
       Login="Usuario"
   else :
       print("Esa opción no está")
-    #con un if se imprime la opción que selecciona en el input;en caso de seleccionar una opción que no es válida se imprime que la opción no está.
+    
 
-  return Login  #se returna el login
+  return Login 
 Login=Inicio()
 
 def CreaCedula():
