@@ -62,6 +62,7 @@ def CreaAccesorios():
     return
 
 
+
 def CreaCabello():
 
     Pelo=[]
