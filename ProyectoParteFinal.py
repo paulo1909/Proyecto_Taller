@@ -1,54 +1,54 @@
-import random
-import sys
+import random #se importa el módulo random que permite generar valores aleatorios.
+import sys #se importa el módulo sys que permite cerrar ciclos.
 
-Rostros=["Redondo", "Alargado", "Corazón", "Cuadrado", "Ovalado", "Rectangular"]
-Piel=["Negra", "Marrón", "Morena", "Clara", "Blanca"]
-Emociones=["Felicidad", "Tristeza", "Seriedad", "Indiferencia", "Enojo", "Temor", "Estrez"]
-Generos=["Masculino", "Femenino"]
-Accesorios=["lentes", "Aretes", "Percing", "Tatuajes", "Collar", "Ninguno", "Ninguno", "Ninguno", "Ninguno", "Ninguno"]
-ColorDelPelo=["negro", "rubio", "café", "castaño", "gris", "invisible"]
-Densidad=["Escaso", "Moderado", "Abundante","","","invisible"]
-Textura=["lacio", "Ondulado", "Rizado","","","invisible"]
-Forma=["almendrados", "separados", "redondos", "caídos", "saltones", "juntos", "profundos", "asiático"]
-Color=["negro", "castaño", "ámbar", "avellana", "verde", "azul", "gris"]
-Provincia=["","San José", "Alajuela", "Cartago", "Heredia", "Puntarenas", "Guanacaste", "Limón"]
-def Inicio():
+Rostros=["Redondo", "Alargado", "Corazón", "Cuadrado", "Ovalado", "Rectangular"] #se declara la variable"Rostros" con una lista que tiene las diferentes formas que pueden tener las caras de las personas.
+Piel=["Negra", "Marrón", "Morena", "Clara", "Blanca"] #se declara la variable "Piel" con una lista que tiene los diferentes colores de piel que tendrían las personas.
+Emociones=["Felicidad", "Tristeza", "Seriedad", "Indiferencia", "Enojo", "Temor", "Estrés"] #se declara la variable "Emociones" con una lista que tiene las diferentes emociones que llegarán a tener las personas.
+Generos=["Masculino", "Femenino"] #se declara la variable "Generos" con una lista que contiene el genero que tendrá cada persona.
+Accesorios=["lentes", "Aretes", "Percing", "Tatuajes", "Collar", "Ninguno", "Ninguno", "Ninguno", "Ninguno", "Ninguno"] #se declara la variable "Accesorios" con una lista que almacena los distintos accsorios que llegarían a tener las personas.
+ColorDelPelo=["negro", "rubio", "café", "castaño", "gris", "invisible"] #se declara la variable "ColorDelPelo" con una lista que almacena los diferentes colores de pelo que tienen las personas.
+Densidad=["Escaso", "Moderado", "Abundante","","","invisible"] #se declara una variable "Densidad" con una lista que almacena las diferentes cantidades de cabello que tendrán las personas.
+Textura=["lacio", "Ondulado", "Rizado","","","invisible"] #se declara la variable "Textura" con una lista que almacena las distintas texturas de cabello que tendrán las personas.
+Forma=["almendrados", "separados", "redondos", "caídos", "saltones", "juntos", "profundos", "asiático"] #se declara la variable "Forma" con una lista que almacena las diferentes formas de los ojos que pueden tener las personas.
+Color=["negro", "castaño", "ámbar", "avellana", "verde", "azul", "gris"] #se declara la variable "Color" con una lista que contiene los distintos colores de ojos que tienen las personas.
+Provincia=["","San José", "Alajuela", "Cartago", "Heredia", "Puntarenas", "Guanacaste", "Limón"] #se declara la variable "Provincia" con una lista que almacena las privincias en  la viven cada persona.
+def Inicio(): #con la función "Inicio" se inicia el login del programa
 
-    N=int(input("Digite el numero correspondiente si desea iniciar sesion como: 1.Administrador 2.Analista 3.Usuario:  "))
-    if N == 1 :
-      Login="Administrador"
-    elif N == 2:
+    N=int(input("Digite el numero correspondiente si desea iniciar sesion como: 1.Administrador 2.Analista 3.Usuario:  ")) #se declara la variable "N" con un input de números enteros.
+    if N == 1 : #se inicia un if para el login,que dice que si se selecciona el número 1 se loguea como administrador
+      Login="Administrador" 
+    elif N == 2: #elif dice que si se selecciona el número 2 se loguea como analista.
       Login="Analista"
-    elif N == 3 :
+    elif N == 3 : #elif dice que si se selecciona el número 3 se loguea como usuario.
       Login="Usuario"
-    else :
-      print("Esa opcioon no está")
-    return Login 
+    else :# Se finaliza el if con un else que dice que si no se selecciona ninguno de estas tres opciones la opción que escogió no existe
+      print("Esa opción no está") #se imprime esa opción no está
+    return Login #se returna el login.
 
 
 
-def CreaCedula():
-    Ced=1000000
-    while Ced in Datos[0]["cedula"] :
-     Ced=Ced+1
-    Datos[0]["cedula"].append(Ced)
-    return
+def CreaCedula(): #se crea la función CreaCedula
+    Ced=1000000 #la variable "Ced" es igual a 1000000,número que entrará en un contador que irá cambiando sus números de izquierda a derecha para generar nuevas cédulas
+    while Ced in Datos[0]["cedula"] : #se hace un ciclo while para recorrer "Ced".
+     Ced=Ced+1 #el contador "ced=ced+1" hace que los números de las cédulas vayan cambiando.
+    Datos[0]["cedula"].append(Ced) #se hace un .append para guardar la variable "Ced" en la ubicación Datos[0]["cedula"]
+    return #se returna la función CreaCedula
 
-def CreaEdad ():
-    c=random.randint(1920,2020)
-    Años=c
-            
-             
-    i=random.randint(1,12)
-    Meses=i
+def CreaEdad (): #se cre la función "CreaEdad"
+    c=random.randint(1920,2020) #se declara la variable "c" con un random.randint entre 1920 y 2020 para crear el año de nacimiento de las personas aleatoriamente.
+    Años=c #se declara la variable "Años" que es igual a "c"
+
+
+    i=random.randint(1,12) #se declara la variable "i" con un random.randint entre 1 y 12 para crear el mes del año de nacimiento de las personas aleatoriamente.
+    Meses=i #se declara la variable "Meses" que es igual a "i"
      
              
-    d=random.randint(1,30)
-    Dias=d
+    d=random.randint(1,30)#se declara la variable "d" con un random.randint entre 1 y 30 para crear el día del mes de nacimiento de las personas aleatoriamente.
+    Dias=d #se declara la variable "Dias" que es igual a "c"
 
-    EdadPersona= [ Años,Meses,Dias]
-    Datos[0]["Edad"].append(EdadPersona) 
-    return 
+    EdadPersona= [ Años,Meses,Dias] #se declara la variable "EdadPersona" con una lista que almacena las variables:Años,Meses y Dias.
+    Datos[0]["Edad"].append(EdadPersona) #se hace un .append para guardar la variable "EdadPersona" en la dirección Datos[0]["Edad"]
+    return #se returna la función CreaEdad
 
 
 def CreaRostro():
@@ -162,7 +162,6 @@ def CreaPersonajeManualmente():
     Datos[0]["Piel"].append(int(input("Digite el numero correspondiente al color de piel que desea: 0.Negra 1.Marrón 2.Morena 3.Clara 4.Blanca:  ")))
     Datos[0]["Emociones"].append(int(input("Digite el numero de la emocion correspondiente: 0.Felicidad 1.Tristeza 2.Seriedad 3.Indiferencia 4.Enojo 5.Temor 6.Estrez")))
     Datos[0]["Genero"].append(int(input("Digite el numero correspondiente al color de piel que desea: 0.Negra 1.Marrón 2.Morena 3.Clara 4.Blanca:  ")))
-    #Datos[0]["Grupo"].append(Grupo[int(input("")
     Datos[0]["Accesorios"].append(int(input("Digite el numero correspondiente al color de piel que desea: 0.Negra 1.Marrón 2.Morena 3.Clara 4.Blanca:  ")))
     Pelo=[]
     Pelo.append(int(input("Digite el numero correspodiente al color del cabello: 0.negro 1.rubio 2.café 3.castaño 4.gris 5.invisible")))
@@ -185,7 +184,7 @@ def CreaPersonajeManualmente():
 
 
 
-def ColsuntarPersona():
+def ConsultarPersona():
     for ced in Datos[0]["cedula"]:
         print(ced)
  
@@ -473,7 +472,7 @@ def menu():
             print("Esta funcion es para administradores")
     elif E==3:
         if Login=="Usuario":
-            ColsuntarPersona()
+            ConsultarPersona()
         else :
             print("Esta funcion es para Usuarios")
     elif E==4:
