@@ -1,3 +1,14 @@
+"""
+AUTORES: Paulo Rojas,Leonardo Bolaños
+FECHA:  07/06/2020
+"""
+
+"""
+DESCRIPCIÓN:Es un programa que puede crear personas aleatoria y manualmente
+ENTRADAS:Datos de la características de las personas
+SALIDAS:Personas y informes.
+RESTRICCIONES:
+"""
 import random #se importa el módulo random que permite generar valores aleatorios.
 import sys #se importa el módulo sys que permite cerrar ciclos.
 
