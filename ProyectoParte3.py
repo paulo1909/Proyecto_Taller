@@ -1,4 +1,5 @@
 import random
+import sys
 
 Rostros=["Redondo", "Alargado", "Corazón", "Cuadrado", "Ovalado", "Rectangular"]
 Piel=["Negra", "Marrón", "Morena", "Clara", "Blanca"]
@@ -22,10 +23,8 @@ def Inicio():
       Login="Usuario"
   else :
       print("Esa opcioon no está")
-    
-
   return Login 
-Login=Inicio()
+
 
 def CreaCedula():
     Ced=1000000
@@ -89,7 +88,6 @@ def CreaProvincia():
 
     Datos[0]["Provincia"].append(random.randint(1, 7))
     return
-print(Login)
 
 Datos=[{"cedula":[], "Edad":[], "FormaDeRostro":[], "Piel":[], "Emociones":[], "Genero":[], "Grupo":[], "Accesorios":[], "Cabello":[], "Ojos":[], "Provincia":[]}]
 
@@ -183,46 +181,88 @@ def Imprimir():
         print("emocion:  ", Emociones[Datos[0]["Emociones" ][contador]]) 
         print("Genero:  ", Generos[Datos[0]["Genero"][contador]])
         print("Accesorio:  ", Accesorios[Datos[0]["Accesorios"][contador]])
-        print("Cabello:  ", ColorDelPelo[Datos[0]["Color del cabello"][contador][0]])
-        print("Cabello:  ", Densidad[Datos[0]["Densidad del cabello"][contador][1]])
-        print("Cabello:  ", Textura[Datos[0]["Textura del cabello"][contador][2]])
+        print("Color del cabello:  ", ColorDelPelo[Datos[0]["Cabello"][contador][0]])
+        print("Densidad del cabello:  ", Densidad[Datos[0]["Cabello"][contador][1]])
+        print("Textura del cabello:  ", Textura[Datos[0]["Cabello"][contador][2]])
 
 
-        print("Ojos:  ", Forma[Datos[0]["Forma de ojos" ][contador][0]])
-        print("Ojos:  ", Color[Datos[0]["color de ojos" ][contador][1]])
+        print("Forma de ojos:  ", Forma[Datos[0]["Ojos"][contador][0]])
+        print("Color de ojos:  ", Color[Datos[0]["Ojos"][contador][1]])
         print("Provincia:  ", Provincia[Datos[0]["Provincia"][contador]])
+        print("-------------------------------------")
         contador=contador+1
         
+
+    menu()
+        
+    return
+
+def ColsuntarPersona():
+    for ced in Datos[0]["cedula"]:
+        print(ced)
+ 
+    contador=Datos[0]["cedula"].index(int(input("Digite la cedula de la persona que desea consultar")))
+
+    print(ced) 
+    print("forma de rostro:  ", Rostros[Datos[0]["FormaDeRostro" ][contador]])
+    print("color de piel:  ", Piel[Datos[0]["Piel"][contador]])
+    print("emocion:  ", Emociones[Datos[0]["Emociones" ][contador]]) 
+    print("Genero:  ", Generos[Datos[0]["Genero"][contador]])
+    print("Accesorio:  ", Accesorios[Datos[0]["Accesorios"][contador]])
+    print("Color del cabello:  ", ColorDelPelo[Datos[0]["Cabello"][contador][0]])
+    print("Densidad del cabello:  ", Densidad[Datos[0]["Cabello"][contador][1]])
+    print("Textura del cabello:  ", Textura[Datos[0]["Cabello"][contador][2]])
+
+
+    print("Forma de ojos:  ", Forma[Datos[0]["Ojos"][contador][0]])
+    print("Color de ojos:  ", Color[Datos[0]["Ojos"][contador][1]])
+    print("Provincia:  ", Provincia[Datos[0]["Provincia"][contador]])
+    return
+
+
+def ModificarPersona():
+    for ced in Datos[0]["cedula"]:
+        print(ced)
+
+    C=Datos[0]["cedula"].index(int(input("Digite la cedula de la persona que desea cambiar:  ")))
+    Datos[0]["Provincia"][C]=int(input("Digite el numero correspondiente a su nueva provincia: 1.San José 2.Alajuela 3.Cartago 4.Heredia 5.Puntarenas 6.Guanacaste 7.Limón:   "))
+    Datos[0]["Emociones"][C]=int(input("Digite el numero de la emocion correspondiente: 0.Felicidad 1.Tristeza 2.Seriedad 3.Indiferencia 4.Enojo 5.Temor 6.Estrez"))
     return
 
 
 def menu():
     print("¿Que desea hacer? ")
-    E=int(input("1.Crear persona aleatoriamente 2.Crear persona manualmente 3.Mostrar toda la lista 4.Para terminar:   "))
+    E=int(input("1.Crear persona aleatoriamente 2.Crear persona manualmente 3.Mostrar toda la lista 4.Para consultar una persona 5.Para modificar persona 6.Para terminar:   "))
     if E==1:
         if Login=="Administrador":
             contador=int(input("Cuantas personas desea Crear"))
             CrearPersonaAleatoria(contador)
         else:
             print("Esta funcion es para administradores")
-            Inicio()
     elif E==2:
         if Login=="Administrador":
             CreaPersonajeManualmente()
         else :
             print("Esta funcion es para administradores")
-            Inicio()
     elif E==3:
-        Imprimir()
+            Imprimir()
     elif E==4:
-        #ModificarPersona()
+        if Login=="Usuario":
+            ColsuntarPersona()
+        else :
+            print("Esta funcion es para Usuarios")
+    elif E==5:
+        if Login=="Usuario":
+            ModificarPersona()
+        else :
+            print("Esta funcion es para Usuarios")
+    elif E==6:
         print("fin")
+        sys.exit()
 
 
-
+    menu()
     return
     
-    
-
-
+Login=Inicio()
 menu()
