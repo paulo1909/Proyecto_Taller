@@ -699,11 +699,55 @@ class Vestuario():
     def getCalzado(self):
         return   self.Calzado
 
+class PersonaPOO():
+    def __init__(self):
+        self.Cedula=0
+        self.Edad=0
+        self.Vestuario=[]
+        self.Ojos=[]
+        self.Cabello=[]
+        self.ColordePiel=[]
+        self.Genero=[]
+        self.FormadecaraEmocion=[]
+        self.Provincia=[]
+        self.Vestuario=[]
+    def setPersonaPOO(self,ced,ed,obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8):
+        self.Cedula=ced
+        self.Edad=ed
+        self.Emocion=obj1
+        self.Ojos=obj2
+        self.Cabello=obj3
+        self.ColordePiel=obj4
+        self.Genero=obj5
+        self.Formadecara=obj6
+        self.Provincia=obj7
+        self.Vestuario=obj8
+    def getCedula(self):
+        return   self.Cedula
+    def getEdad(self):
+        return self.Edad
+    def getEmocion(self):
+        return self.Emocion
+    def getOjos(self):
+        return self.Ojos
+    def getCabello(self):
+        return self.Cabello
+    def getColordePiel(self):
+        return self.ColordePiel
+    def getGenero(self):
+        return self.Genero
+    def getFormadecara(self):
+        return self.Formadecara
+    def getProvincia(self):
+        return self.Provincia
+    def getVestuario(self):
+        return self.Vestuario
 
-DatosPOO=[{"cedula":[], "Edad":[], "FormaDeRostro":[], "Piel":[], "Emociones":[], "Genero":[], "Grupo":[], "Accesorios":[], "Cabello":[], "Ojos":[], "Provincia":[], "Vestuario":[]}] 
+
+DatosPOO=[{"PersonasPOO":[],"cedula":[], "FormaDeRostro":[], "Piel":[], "Emociones":[], "Genero":[], "Grupo":[], "Accesorios":[], "Cabello":[], "Ojos":[], "Provincia":[], "Vestuario":[]}] 
 
 
-def CreaPersonasPOO():
+def CreaDatosPOO():
     for ced in Datos[0]["cedula"]:
         C=Datos[0]["cedula"].index(ced)
     
@@ -786,12 +830,17 @@ def CreaPersonasPOO():
         Vestuario.setVestuario(listaVestuario[0], listaVestuario[1], listaVestuario[2])
 
         DatosPOO[0]["Vestuario"].append(Vestuario)
-
-
-
-
-
     return
+
+def CreaPersonaPOO():
+    for ced in Datos[0]["cedula"]:
+        c=Datos[0]["cedula"].index(ced)
+        Pers=PersonaPOO()
+        Pers.setPersonaPOO(ced, Datos[0]["Edad"][c], DatosPOO[0]["Emociones"][c], DatosPOO[0]["Ojos"][c], DatosPOO[0]["Cabello"][c], DatosPOO[0]["Piel"][c], DatosPOO[0]["Genero"][c], DatosPOO[0]["FormaDeRostro"][c], DatosPOO[0]["Provincia"][c], DatosPOO[0]["Vestuario"][c])
+        
+    return
+
+
 
 def menu(): #se define la función menu
 
@@ -805,7 +854,7 @@ def menu(): #se define la función menu
         if  Login == "Administrador":
             contador=int(input("Cuantas personas desea Crear:   "))
             CrearPersonaAleatoria(contador)
-            CreaPersonasPOO()
+            CreaDatosPOO()
         else:
             print("Esta funcion es para administradores")
     elif E==2:
