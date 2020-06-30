@@ -60,6 +60,24 @@ def CreaAccesorios():
     Datos[0]["Accesorios"].append(random.randint(0, 9))
     return
 
+def CreaEdad ():
+     c=random.randint(1920,2020)
+     print(c)
+     Años=c
+            
+             
+     i=random.randint(1,12)
+     print(i)
+     Meses=i
+     
+             
+     d=random.randint(1,30)
+     print(d)
+     Dias=d
+
+     EdadPersona= [ Años,Meses,Dias]
+     Datos[0]["Edad"].append(EdadPersona) 
+     return CreaEdad
 
 def CreaCabello():
 
