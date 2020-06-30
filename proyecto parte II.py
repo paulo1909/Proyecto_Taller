@@ -855,6 +855,7 @@ def menu(): #se define la función menu
             contador=int(input("Cuantas personas desea Crear:   "))
             CrearPersonaAleatoria(contador)
             CreaDatosPOO()
+            CreaPersonaPOO()
         else:
             print("Esta funcion es para administradores")
     elif E==2:
