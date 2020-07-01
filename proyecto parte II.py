@@ -843,7 +843,7 @@ def CreaDatosPOO():#"CreaDatosPOO" function is created
         Vestuario.setVestuario(listaVestuario[0], listaVestuario[1], listaVestuario[2])
 
         DatosPOO[0]["Vestuario"].append(Vestuario)
-  return
+ return
 #one by one the characteristics that people will have are created and stored at the list "DatosPOO".
 
 def CreaPersonaPOO():#"CreaPersonaPOO" function is created
@@ -861,7 +861,7 @@ def ConsultarPersonaPoo():
    
 
 
-def menu(): #se define la función menu
+def menu(): #"menu" function is created
 
     Login=Inicio()
      
@@ -904,8 +904,7 @@ def menu(): #se define la función menu
     else:
         pass
 
-
- #se usa un if para crear un menú de opciones que permite ser administrador,analista o usuario y dependiendo de la opción que seleccione tiene diferentes funciones a las que puede acceder.
-    return #returna la función menu
+# an if is used to create an options menu that allows you to be an administrator,analist, or user, and depending on the option you select, it has different functions that you can access.
+    return #return "menu" function
     
-menu() #regresa al menu
+menu() #back to menu
