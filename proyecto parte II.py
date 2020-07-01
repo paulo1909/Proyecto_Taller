@@ -487,8 +487,9 @@ def informes(): #se crea la función informes
     menu() #regresa al menú
     return #se returna la función Informes
 
+# class will be created
 
-class FormaOjos():
+class FormaOjos(): #"Forma de ojos" class is created
     def __init__(self):
         self.IDFormaOjos=0
         self.nombreFormaOjos=""
@@ -499,8 +500,9 @@ class FormaOjos():
         return self.IDFormaOjos
     def getIDnombreFormaOjoss(self):
         return self.nombreFormaOjos
+# attributes are granted with the set and get method
 
-class ColorOjos():
+class ColorOjos():#"ColorOjos" class is created
     def __init__(self):
         self.IDColorOjos=0
         self.nombreColorOjos=""
@@ -511,10 +513,9 @@ class ColorOjos():
         return self.IDColorOjos
     def getnombreColorOjos(self):
         return self.nombreColorOjos
+#attributes are granted with the set and get method
 
-
-
-class Ojos():
+class Ojos():#"Ojos" class is created
     def __init__(self):
         self.IDOjos=0
         self.Forma=[]
@@ -529,8 +530,9 @@ class Ojos():
         return self.Forma
     def getColor(self):
         return self.Color
+#attributes are granted with the set and get method
 
-class Emocion():
+class Emocion():#"Emocion" class is created
     def __init__(self):
         self.IDEmocion=0
         self.nombreEmocion=""
@@ -541,8 +543,9 @@ class Emocion():
         return self.IDEmocion
     def getnombreEmocion(self):
         return self.nombreEmocion
+#attributes are granted with the set and get method
 
-class Genero():
+class Genero():#"Genero" class is created
     def __init__(self):
         self.IDGenero=0
         self.nombreGenero=""        
@@ -553,8 +556,9 @@ class Genero():
         return self.IDGenero
     def getnombreGenero(self):
         return self.nombreGenero
+#attributes are granted with the set and get method
 
-class Provincias():
+class Provincias():#"Provincias" class is created
     def __init__(self):
         self.IDProvincia=0
         self.nombreProvincia=""
@@ -564,9 +568,10 @@ class Provincias():
     def getIDProvincia(self):
         return self.IDProvincia
     def getnombreProvincia(self):
-        return self.nombreProvincia
-    
-class TexturaCabello():
+        return self.nombreProvincia 
+#attributes are granted with the set and get method
+
+class TexturaCabello():#"TexturaCabello" class is created
     def __init__(self):
         self.IDTexturaCabello=0
         self.nombreTexturaCabello=""
@@ -577,8 +582,9 @@ class TexturaCabello():
         return self.IDTexturaCabello
     def getnombreTexturaCabello(self):
         return self.nombreTexturaCabello
+#attributes are granted with the set and get method
 
-class DensidadCabello():
+class DensidadCabello():#"DensidadCabello" class is created
     def __init__(self):
         self.IDDensidadCabello=0
         self.nombreDensidadCabello=""
@@ -589,8 +595,9 @@ class DensidadCabello():
         return self.IDDensidadCabello
     def getnombreDensidadCabello(self):
         return self.nombreDensidadCabello
+#attributes are granted with the set and get method
 
-class ColorDePelo():
+class ColorDePelo():#"ColorDePelo" class is created
     def __init__(self):
         self.IDColorDePelo=0
         self.nombreColorDePelo=""
@@ -601,8 +608,9 @@ class ColorDePelo():
         return self.IDColorDePelo
     def getnombreColorDelPelo(self):
         return self.nombreColorDelPelo
+#attributes are granted with the set and get method
 
-class Pelo():
+class Pelo(): #"Pelo" class is created
     def __init__(self):
         self.IDPelo=0
         self.TexturaCabello=[]
@@ -619,8 +627,9 @@ class Pelo():
         return   self.DensidadCabello
     def getColorDePelo(self):
         return   self.ColorDePelo
+#attributes are granted with the set and get method
 
-class Formadecara ():
+class Formadecara ():#"Formadecara" class is created
     def __init__(self):
         self.IDFormadecara=0
         self.nombreFormadecara=""
@@ -631,8 +640,9 @@ class Formadecara ():
         return self.IDFormadecara
     def getnombreFormadecara(self):
         return self.nombreFormadecara
+#attributes are granted with the set and get method
 
-class ColorDePiel ():
+class ColorDePiel ():#"ColorDePiel" class is created
     def __init__(self):
         self.IDColorDePiel=0
         self.nombreColorDePiel=""
@@ -643,8 +653,9 @@ class ColorDePiel ():
         return self.IDColorDePiel
     def getnombreColorDePiel(self):
         return self.nombreColorDePiel
+#attributes are granted with the set and get method
 
-class Accesorio():
+class Accesorio():#"Accesorio" class is created
     def __init__(self):
         self.IDAccesorios=0
         self.nombreAccesorios=""
@@ -655,8 +666,9 @@ class Accesorio():
         return self.IDAccesorio
     def getnombreAccesorios(self):
         return self.nombreAccesorios
+#attributes are granted with the set and get method
 
-class Ropas():
+class Ropas():#"Ropas" class is created
     def __init__(self):
         self.IDRopa=0
         self.nombreRopa=""
@@ -667,9 +679,9 @@ class Ropas():
         return self.IDRopa
     def getnombreRopa(self):
         return self.nombreRopa
+#attributes are granted with the set and get method
 
-
-class Calzados ():
+class Calzados ():#"Calzados" class is created
     def __init__(self):
         self.IDCalzado=0
         self.nombeCalzado=""
@@ -680,8 +692,9 @@ class Calzados ():
         return self.IDCalzado
     def getnombeCalzado(self):
         return self.nombeCalzado
+#attributes are granted with the set and get method
 
-class Vestuario():
+class Vestuario():#"Vestuario" class is created
     def __init__(self):
         self.IDVestuario=0
         self.Accesorio=[]
@@ -698,8 +711,9 @@ class Vestuario():
         return   self.Ropa
     def getCalzado(self):
         return   self.Calzado
+#attributes are granted with the set and get method
 
-class PersonaPOO():
+class PersonaPOO():#"PersonaPoo" class is created
     def __init__(self):
         self.Cedula=0
         self.Edad=0
@@ -711,7 +725,7 @@ class PersonaPOO():
         self.FormadecaraEmocion=[]
         self.Provincia=[]
         self.Vestuario=[]
-    def setPersonaPOO(self,ced,ed,obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8):
+    def setPersonaPOO(self,ced,ed,obj1,obj2,obj3,obj4,obj5,obj6,obj7,obj8): #"setPersonaPOO" function is created
         self.Cedula=ced
         self.Edad=ed
         self.Emocion=obj1
@@ -722,35 +736,35 @@ class PersonaPOO():
         self.Formadecara=obj6
         self.Provincia=obj7
         self.Vestuario=obj8
-    def getCedula(self):
+    def getCedula(self):#"getCedula" function is created
         return   self.Cedula
-    def getEdad(self):
+    def getEdad(self):#"getEdad" function is created
         return self.Edad
-    def getEmocion(self):
+    def getEmocion(self):#"getEmocion" function is created
         return self.Emocion
-    def getOjos(self):
+    def getOjos(self):#"getojos" function is created
         return self.Ojos
-    def getCabello(self):
+    def getCabello(self):#"getCabello" function is created
         return self.Cabello
-    def getColordePiel(self):
+    def getColordePiel(self):#"getColordePiel" function is created
         return self.ColordePiel
-    def getGenero(self):
+    def getGenero(self):#"getGenero" function is created
         return self.Genero
-    def getFormadecara(self):
+    def getFormadecara(self):#"getFormadecara" function is created
         return self.Formadecara
-    def getProvincia(self):
+    def getProvincia(self):#"getProvincia" function is created
         return self.Provincia
-    def getVestuario(self):
+    def getVestuario(self):#"getVestuario" function is created
         return self.Vestuario
-
+#The "PersonaPoo" class is used to create functions that contain parameters and methods to create objects
 
 DatosPOO=[{"PersonasPOO":[],"cedula":[], "FormaDeRostro":[], "Piel":[], "Emociones":[], "Genero":[], "Grupo":[], "Accesorios":[], "Cabello":[], "Ojos":[], "Provincia":[], "Vestuario":[]}] 
+#The DatosPoo list is created, which has a dictionary, where the data will be stored
 
-
-def CreaDatosPOO():
-    for ced in Datos[0]["cedula"]:
+def CreaDatosPOO():#"CreaDatosPOO" function is created
+    for ced in Datos[0]["cedula"]:#with a for loop, the adress Datos[0]["cedula"] is traversed
         C=Datos[0]["cedula"].index(ced)
-    
+     #with an .index the data of the "cedula" is accessed
 
         listaOjos=[]
         FO=FormaOjos()
@@ -763,7 +777,6 @@ def CreaDatosPOO():
 
         Ojs=Ojos()
         Ojs.setOjos(listaOjos[0], listaOjos[1])
-
         DatosPOO[0]["Ojos"].append(Ojs)
 
         Emo=Emocion()
@@ -830,16 +843,22 @@ def CreaDatosPOO():
         Vestuario.setVestuario(listaVestuario[0], listaVestuario[1], listaVestuario[2])
 
         DatosPOO[0]["Vestuario"].append(Vestuario)
-    return
+  return
+#one by one the characteristics that people will have are created and stored at the list "DatosPOO".
 
-def CreaPersonaPOO():
+def CreaPersonaPOO():#"CreaPersonaPOO" function is created
     for ced in Datos[0]["cedula"]:
-        c=Datos[0]["cedula"].index(ced)
+        c=Datos[0]["cedula"].index(ced)#with an .index the data of the "cedula" is accessed
         Pers=PersonaPOO()
         Pers.setPersonaPOO(ced, Datos[0]["Edad"][c], DatosPOO[0]["Emociones"][c], DatosPOO[0]["Ojos"][c], DatosPOO[0]["Cabello"][c], DatosPOO[0]["Piel"][c], DatosPOO[0]["Genero"][c], DatosPOO[0]["FormaDeRostro"][c], DatosPOO[0]["Provincia"][c], DatosPOO[0]["Vestuario"][c])
-        
+        #with the pers variable and the set method we convert the data into objects
     return
 
+def ConsultarPersonaPoo():
+
+
+
+   
 
 
 def menu(): #se define la función menu
